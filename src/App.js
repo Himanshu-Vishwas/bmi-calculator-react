@@ -14,7 +14,7 @@ function App() {
   let calcBmi = (event) =>{
     event.preventDefault()
 
-    if(weight===0 || height === 0){
+    if(weight ==0 || height == 0){
       alert('Enter valid data...')
     }else{
       let bmi = (weight/(height*height)*10000)
