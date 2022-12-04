@@ -17,15 +17,17 @@ function App() {
     if(weight===0 || height === 0){
       alert('Enter valid data...')
     }else{
-      let bmi = (weight/(height*height)*703)
+      let bmi = (weight/(height*height)*10000)
       setBmi(bmi.toFixed(1))
 
-      if(bmi<25){
+      if(bmi<18.5){
         setMessage('You are underweight.')
-      }else if(bmi>=25 && bmi<30){
+      }else if(bmi>=18.5 && bmi<25){
         setMessage('You are healthy.')
-      }else{ 
+      }else if(bmi>=25 && bmi<30){
         setMessage('You are overweight.')
+      }else{ 
+        setMessage('You are obese.')
       }
 
     }
@@ -35,9 +37,9 @@ function App() {
   if(bmi<1){
     imgSrc = null
   }else{
-    if(bmi<25){
+    if(bmi<18.5){
       imgSrc = require('../src/assets/under.png')
-    }else if(bmi>=25 && bmi<30){
+    }else if(bmi>=18.5 && bmi<25){
       imgSrc = require('../src/assets/healthy.png')
     }else{
       imgSrc = require('../src/assets/overweight.png')
@@ -54,11 +56,11 @@ function App() {
         <h2 className="center">BMI Calculator</h2>
         <form onSubmit={calcBmi}>
           <div>
-            <label>Weight (lbs) </label>
+            <label>Weight (in kg) </label>
             <input value={weight} onChange={(event) => setWeight(event.target.value )}/>
           </div>
           <div>
-            <label>Height (in) </label>
+            <label>Height (in cms.) </label>
             <input value={height} onChange={(event)=>setHeight(event.target.value)}/>
           </div>
           <div>
