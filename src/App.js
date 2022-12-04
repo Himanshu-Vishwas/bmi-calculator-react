@@ -51,6 +51,7 @@ function App() {
   }
 
   return (
+    <>
     <div className="app">
       <div className="container">
         <h2 className="center">BMI Calculator</h2>
@@ -76,8 +77,11 @@ function App() {
         <div className="img-container">
           <img src = {imgSrc} alt=''></img>
         </div>
+        <p>&copy; Developer: <a href="https://himanshu-vishwas.github.io" target="_blank">Himanshu Vishwas</a>.</p>
         </div>
     </div>
+   
+    </>
   );
 }
 
