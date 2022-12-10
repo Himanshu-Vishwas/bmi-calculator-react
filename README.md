@@ -1,2 +1,2 @@
 # BMI CALCULATOR USING REACT
-live site url: https://developer.devgroup.engineer/bmi-calculator-react/
+live site url: https://himanshu-vishwas.github.io/bmi-calculator-react/
